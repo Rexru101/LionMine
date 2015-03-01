@@ -6,7 +6,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
 
 namespace Prototype2
-{
+{//Bilal smells
     public class Player
     {
         Texture2D playerIcon, flag;
