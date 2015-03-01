@@ -1,2 +1,0 @@
-Content\sprites\lifeCell.xnb
-Content\fonts\SpriteFont1.xnb
