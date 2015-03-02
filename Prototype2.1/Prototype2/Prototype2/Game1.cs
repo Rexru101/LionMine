@@ -9,12 +9,11 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 using System.Collections;
-
+//Mines cannot be placed adjacent to each other
 namespace Prototype2
 {
     public class Game1 : Microsoft.Xna.Framework.Game
     {
-        //check if hex is valid (cannot move on opponent's square)
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         SpriteFont spriteFont;
@@ -31,7 +30,9 @@ namespace Prototype2
         bool destinationIsSelected;
         bool gameOver;
         String winner;
-        int explosionTime = 2000, detectTime = 3000, defusionTime = 5000;
+        String message;
+
+        int explosionTime = 2000, detectTime = 3000, defusionTime = 5000, pauseTime = 2500;
         int numOfStuff, flagDistance;
         int bitValueP1Mine = 1, bitValueP2Mine = 2, bitValueP1Flag = 4, bitValueP2Flag = 8;
 
@@ -129,13 +130,27 @@ namespace Prototype2
             explosionTime += gameTime.ElapsedGameTime.Milliseconds;
             detectTime += gameTime.ElapsedGameTime.Milliseconds;
             defusionTime += gameTime.ElapsedGameTime.Milliseconds;
+            pauseTime += gameTime.ElapsedGameTime.Milliseconds;
             prevMouse = currentMouse;
             currentMouse = Mouse.GetState();
+
             if (Keyboard.GetState().IsKeyDown(Keys.Enter))
                 this.Exit();
+            if (pauseTime < 2500)//
+            {
+                pauseTime += gameTime.ElapsedGameTime.Milliseconds;
+            }
+            else if (p1.getActionPoints() == 0 && p2.getActionPoints() == 0)
+            {
+                newGame = true;
+            }
             if (IsActive && currentMouse.LeftButton == ButtonState.Released
                 && prevMouse.LeftButton == ButtonState.Pressed)
             {
+                if (newGame)//
+                {
+                    endTurn();
+                }
                 if (Player.Player1Turn)
                     checkClick(p1);
                 else
@@ -175,6 +190,11 @@ namespace Prototype2
 
             spriteBatch.Draw(hexBoard, Vector2.Zero, Color.White);
 
+            spriteBatch.DrawString(spriteFont, "" + p1.getMines(), new Vector2(WIDTH - 75, HEIGHT / 2 - 20), Color.Red);
+            spriteBatch.DrawString(spriteFont, "" + p2.getMines(), new Vector2(WIDTH - 75, HEIGHT / 2 + 20), Color.Blue);
+            spriteBatch.DrawString(spriteFont, "" + p1.getActionPoints(), new Vector2(WIDTH - 115, HEIGHT / 2 - 20), Color.Red);
+            spriteBatch.DrawString(spriteFont, "" + p2.getActionPoints(), new Vector2(WIDTH - 115, HEIGHT / 2 + 20), Color.Blue);
+
             if (newGame)
             {
                 drawNewGame();
@@ -182,19 +202,14 @@ namespace Prototype2
                 return;
             }
 
-            spriteBatch.DrawString(spriteFont, "" + p1.getMines(), new Vector2(WIDTH - 75, HEIGHT / 2 - 20), Color.Red);
-            spriteBatch.DrawString(spriteFont, "" + p2.getMines(), new Vector2(WIDTH - 75, HEIGHT / 2 + 20), Color.Blue);
-            spriteBatch.DrawString(spriteFont, "" + p1.getActionPoints(), new Vector2(WIDTH - 115, HEIGHT / 2 - 20), Color.Red);
-            spriteBatch.DrawString(spriteFont, "" + p2.getActionPoints(), new Vector2(WIDTH - 115, HEIGHT / 2 + 20), Color.Blue);
-            
             if (gameOver)
                 spriteBatch.DrawString(spriteFont, winner, new Vector2(WIDTH - 150, 40), Color.Green);
             if (explosionTime < 2000)
-                spriteBatch.DrawString(spriteFont, "KABOOM!", new Vector2(WIDTH - 150, 40), Color.Green);
+                spriteBatch.DrawString(spriteFont, "KABOOM!", new Vector2(WIDTH - 150, 90), Color.Green);
             if (detectTime < 3000)
-                spriteBatch.DrawString(spriteFont, "" + numOfStuff, new Vector2(WIDTH - 150, 40), Color.Green);
+                spriteBatch.DrawString(spriteFont, numOfStuff + " objects \nin area", new Vector2(WIDTH - 150, 140), Color.Green);
             if (defusionTime < 5000)
-                spriteBatch.DrawString(spriteFont, "" + flagDistance, new Vector2(WIDTH - 150, 40), Color.Green);
+                spriteBatch.DrawString(spriteFont, message, new Vector2(WIDTH - 150, 200), Color.Green);
             drawSquare();
             
             spriteBatch.Draw(goltana, new Vector2(xyRect[p1.getPosition().X, p1.getPosition().Y].X,
@@ -436,7 +451,7 @@ namespace Prototype2
                                 }
                             }
                         }
-                        else if (!setup)
+                        else if (!setup && p.getActionPoints() > 0)
                         {
                             if (isMovementValid(p.getPosition(), i, j))
                             {
@@ -550,8 +565,9 @@ namespace Prototype2
             p.subActionPoints(1);
             p.move(row, col);
 
-            checkAndEndTurn();
             checkForContact();
+            if (p.getActionPoints() == 0)
+                pauseTime = 0;
         }
 
         public void checkAndEndTurn()
@@ -566,20 +582,21 @@ namespace Prototype2
                 p1.resetActionPoints();
                 Player.Player1Turn = !Player.Player1Turn;
             }
-        }
+        }//not needed
 
         public void endTurn()
         {
             if (Player.Player1Turn)
             {
-                p1.subActionPoints(p1.getActionPoints());
+                //p1.subActionPoints(p1.getActionPoints());
                 p2.resetActionPoints();
             }
             else if (!Player.Player1Turn)
             {
-                p2.subActionPoints(p2.getActionPoints());
+                //p2.subActionPoints(p2.getActionPoints());
                 p1.resetActionPoints();
             }
+            newGame = false;
             Player.Player1Turn = !Player.Player1Turn;
         }
 
@@ -599,9 +616,9 @@ namespace Prototype2
                         explosionTime = 0;
                         xyBoard[p1.getPosition().X, p1.getPosition().Y] -= p2.getBitM();
                         p1.setPosition(p1.getSpawn());
-                        p2.getInventory()[i].X = -1;
-                        p2.getInventory()[i].Y = -1;
-                        endTurn();
+                        p2.getInventory()[i] = new Point(-1, -1);
+                        //endTurn();
+                        p1.subActionPoints(p1.getActionPoints());
                     }
                 }
                 else if (p1.getInventory()[i].X == p2.getPosition().X && p1.getInventory()[i].Y == p2.getPosition().Y)
@@ -616,9 +633,9 @@ namespace Prototype2
                         explosionTime = 0;
                         xyBoard[p2.getPosition().X, p2.getPosition().Y] -= p1.getBitM();
                         p2.setPosition(p2.getSpawn());
-                        p1.getInventory()[i].X = -1;
-                        p1.getInventory()[i].Y = -1;
-                        endTurn();
+                        p1.getInventory()[i] = new Point(-1, -1);
+                        //endTurn();
+                        p2.subActionPoints(p2.getActionPoints());
                     }
                 }
             }
@@ -631,24 +648,26 @@ namespace Prototype2
                 p1.subActionPoints(2);
                 numOfStuff = 0;
                 for (int i = 0; i < p2.getInventory().Length; i++)
+                {
                     if (isMovementValid(p1.getPosition(), p2.getInventory()[i].X, p2.getInventory()[i].Y))
                         numOfStuff++;
-                //if (numOfStuff > 0)
-                    //detectTime = 0;
+                }
                 if (p1.getActionPoints() == 0)
-                    endTurn();
+                    pauseTime = 0;
+                detectTime = 0;
             }
             else if (!Player.Player1Turn && p2.getActionPoints() > 1)
             {
                 p2.subActionPoints(2);
                 numOfStuff = 0;
                 for (int i = 0; i < p1.getInventory().Length; i++)
+                {
                     if (isMovementValid(p2.getPosition(), p1.getInventory()[i].X, p1.getInventory()[i].Y))
                         numOfStuff++;
-                //if (numOfStuff > 0)
-                    detectTime = 0;
+                }
                 if (p2.getActionPoints() == 0)
-                    endTurn();
+                    pauseTime = 0;
+                detectTime = 0;
             }
         }
 
@@ -659,37 +678,50 @@ namespace Prototype2
             {
                 p1.subActionPoints(3);
                 for (int i = 1; i < p2.getInventory().Length; i++)
+                {
                     if (p2.getInventory()[i].X == playerDestination.X && p2.getInventory()[i].Y == playerDestination.Y)
                     {
                         calculateFlagDistance(p1, playerDestination, p2.getInventory()[0]);
                         p2.getInventory()[i] = new Point(-1, -1);
+                        break;
                     }
-
+                    else
+                    {
+                        message = "Bomb not \nfound";
+                    }
+                }
                 destinationIsSelected = false;
                 xyBoard[playerDestination.X, playerDestination.Y] -= 16;
                 playerDestination = new Point(-1, -1);
 
                 if (p1.getActionPoints() == 0)
-                    endTurn();
+                    pauseTime = 0;
+                defusionTime = 0;
             }
             else if (!Player.Player1Turn && p2.getActionPoints() > 2)
             {
                 p2.subActionPoints(3);
                 for (int i = 1; i < p1.getInventory().Length; i++)
-                    if (p1.getInventory()[i].X == playerDestination.X && p2.getInventory()[i].Y == playerDestination.Y)
+                {
+                    if (p1.getInventory()[i].X == playerDestination.X && p1.getInventory()[i].Y == playerDestination.Y)
                     {
                         calculateFlagDistance(p2, playerDestination, p1.getInventory()[0]);
                         p1.getInventory()[i] = new Point(-1, -1);
+                        break;
                     }
-
+                    else
+                    {
+                        message = "Bomb not \nfound";
+                    }
+                }
                 destinationIsSelected = false;
                 xyBoard[playerDestination.X, playerDestination.Y] -= 16;
                 playerDestination = new Point(-1, -1);
 
                 if (p2.getActionPoints() == 0)
-                    endTurn();
+                    pauseTime = 0;
+                defusionTime = 0;
             }
-            defusionTime = 0;
         }
 
         public void calculateFlagDistance(Player p, Point start, Point goal)
@@ -707,10 +739,8 @@ namespace Prototype2
                 discovered.Enqueue(temp);
                 p.fillFlagArea(temp.X, temp.Y);
 
-                //if (isMovementValid(temp, goal.X, goal.Y))
                 if (temp.Equals(goal))
                 {
-                    //flagDistance++;
                     break;
                 }
                 else
@@ -720,13 +750,12 @@ namespace Prototype2
                 if (queue.Count == 0)
                 {
                     flagDistance++;
+                    message = "Flag is " + flagDistance + "\nhexes away";
                     if (frontier.Contains(goal))
                     {
-                        //flagDistance++;
                         while (frontier.Count != 0)
                         {
                             Point frontierTemp = frontier.Dequeue();
-                            //queue.Enqueue(frontierTemp);
                             p.fillFlagArea(frontierTemp.X, frontierTemp.Y);
                         }
                         break;
@@ -735,7 +764,6 @@ namespace Prototype2
                     {
                         Point frontierTemp = frontier.Dequeue();
                         queue.Enqueue(frontierTemp);
-                        //p.fillFlagArea(frontierTemp.X, frontierTemp.Y);
                     }
                 }
             }

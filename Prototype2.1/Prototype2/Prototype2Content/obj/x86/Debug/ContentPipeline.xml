@@ -7,7 +7,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Rexru101\Documents\Visual Studio 2010\Projects\Lion-Mine\Prototype2.1\Prototype2\Prototype2\bin\x86\Debug\Content\Sprites\hexBoard.xnb</Output>
+      <Output>C:\Users\Rexru101\Documents\Visual Studio 2010\Projects\LionMine\Prototype2.1\Prototype2\Prototype2\bin\x86\Debug\Content\Sprites\hexBoard.xnb</Output>
       <Time>2015-02-27T11:09:07.04186-05:00</Time>
     </Item>
     <Item>
@@ -16,7 +16,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Rexru101\Documents\Visual Studio 2010\Projects\Lion-Mine\Prototype2.1\Prototype2\Prototype2\bin\x86\Debug\Content\Sprites\hexSquare.xnb</Output>
+      <Output>C:\Users\Rexru101\Documents\Visual Studio 2010\Projects\LionMine\Prototype2.1\Prototype2\Prototype2\bin\x86\Debug\Content\Sprites\hexSquare.xnb</Output>
       <Time>2015-02-27T11:09:07.0468603-05:00</Time>
     </Item>
     <Item>
@@ -25,7 +25,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Rexru101\Documents\Visual Studio 2010\Projects\Lion-Mine\Prototype2.1\Prototype2\Prototype2\bin\x86\Debug\Content\Sprites\hexSquareBlue.xnb</Output>
+      <Output>C:\Users\Rexru101\Documents\Visual Studio 2010\Projects\LionMine\Prototype2.1\Prototype2\Prototype2\bin\x86\Debug\Content\Sprites\hexSquareBlue.xnb</Output>
       <Time>2015-02-27T11:09:07.0528606-05:00</Time>
     </Item>
     <Item>
@@ -34,7 +34,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Rexru101\Documents\Visual Studio 2010\Projects\Lion-Mine\Prototype2.1\Prototype2\Prototype2\bin\x86\Debug\Content\Sprites\hexSquareRed.xnb</Output>
+      <Output>C:\Users\Rexru101\Documents\Visual Studio 2010\Projects\LionMine\Prototype2.1\Prototype2\Prototype2\bin\x86\Debug\Content\Sprites\hexSquareRed.xnb</Output>
       <Time>2015-02-27T11:09:07.0578609-05:00</Time>
     </Item>
     <Item>
@@ -43,7 +43,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Rexru101\Documents\Visual Studio 2010\Projects\Lion-Mine\Prototype2.1\Prototype2\Prototype2\bin\x86\Debug\Content\Sprites\pixel.xnb</Output>
+      <Output>C:\Users\Rexru101\Documents\Visual Studio 2010\Projects\LionMine\Prototype2.1\Prototype2\Prototype2\bin\x86\Debug\Content\Sprites\pixel.xnb</Output>
       <Time>2015-02-27T11:09:07.0688615-05:00</Time>
     </Item>
     <Item>
@@ -52,7 +52,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Rexru101\Documents\Visual Studio 2010\Projects\Lion-Mine\Prototype2.1\Prototype2\Prototype2\bin\x86\Debug\Content\Sprites\GoltanaFlag.xnb</Output>
+      <Output>C:\Users\Rexru101\Documents\Visual Studio 2010\Projects\LionMine\Prototype2.1\Prototype2\Prototype2\bin\x86\Debug\Content\Sprites\GoltanaFlag.xnb</Output>
       <Time>2015-02-27T11:09:07.0348596-05:00</Time>
     </Item>
     <Item>
@@ -61,7 +61,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Rexru101\Documents\Visual Studio 2010\Projects\Lion-Mine\Prototype2.1\Prototype2\Prototype2\bin\x86\Debug\Content\Sprites\LargFlag.xnb</Output>
+      <Output>C:\Users\Rexru101\Documents\Visual Studio 2010\Projects\LionMine\Prototype2.1\Prototype2\Prototype2\bin\x86\Debug\Content\Sprites\LargFlag.xnb</Output>
       <Time>2015-02-28T16:29:37.6230221-05:00</Time>
     </Item>
     <Item>
@@ -70,7 +70,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Rexru101\Documents\Visual Studio 2010\Projects\Lion-Mine\Prototype2.1\Prototype2\Prototype2\bin\x86\Debug\Content\Sprites\redFlag.xnb</Output>
+      <Output>C:\Users\Rexru101\Documents\Visual Studio 2010\Projects\LionMine\Prototype2.1\Prototype2\Prototype2\bin\x86\Debug\Content\Sprites\redFlag.xnb</Output>
       <Time>2015-02-27T21:09:29.2532126-05:00</Time>
     </Item>
     <Item>
@@ -79,7 +79,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Rexru101\Documents\Visual Studio 2010\Projects\Lion-Mine\Prototype2.1\Prototype2\Prototype2\bin\x86\Debug\Content\Sprites\blueFlag.xnb</Output>
+      <Output>C:\Users\Rexru101\Documents\Visual Studio 2010\Projects\LionMine\Prototype2.1\Prototype2\Prototype2\bin\x86\Debug\Content\Sprites\blueFlag.xnb</Output>
       <Time>2015-02-27T21:09:24.0219134-05:00</Time>
     </Item>
     <Item>
@@ -88,7 +88,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Rexru101\Documents\Visual Studio 2010\Projects\Lion-Mine\Prototype2.1\Prototype2\Prototype2\bin\x86\Debug\Content\Sprites\hexBoardCoordinates.xnb</Output>
+      <Output>C:\Users\Rexru101\Documents\Visual Studio 2010\Projects\LionMine\Prototype2.1\Prototype2\Prototype2\bin\x86\Debug\Content\Sprites\hexBoardCoordinates.xnb</Output>
       <Time>2015-02-28T16:26:14.8254227-05:00</Time>
     </Item>
     <Item>
@@ -97,7 +97,7 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Rexru101\Documents\Visual Studio 2010\Projects\Lion-Mine\Prototype2.1\Prototype2\Prototype2\bin\x86\Debug\Content\Fonts\SpriteFont1.xnb</Output>
+      <Output>C:\Users\Rexru101\Documents\Visual Studio 2010\Projects\LionMine\Prototype2.1\Prototype2\Prototype2\bin\x86\Debug\Content\Fonts\SpriteFont1.xnb</Output>
       <Time>2015-02-27T11:09:06.9928572-05:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
@@ -106,10 +106,10 @@
       <TargetProfile>HiDef</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Users\Rexru101\Documents\Visual Studio 2010\Projects\Lion-Mine\Prototype2.1\Prototype2\Prototype2Content\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\Rexru101\Documents\Visual Studio 2010\Projects\Lion-Mine\Prototype2.1\Prototype2\Prototype2\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\Rexru101\Documents\Visual Studio 2010\Projects\Lion-Mine\Prototype2.1\Prototype2\Prototype2Content\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\Rexru101\Documents\Visual Studio 2010\Projects\Lion-Mine\Prototype2.1\Prototype2\Prototype2\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\Rexru101\Documents\Visual Studio 2010\Projects\LionMine\Prototype2.1\Prototype2\Prototype2Content\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Rexru101\Documents\Visual Studio 2010\Projects\LionMine\Prototype2.1\Prototype2\Prototype2\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Rexru101\Documents\Visual Studio 2010\Projects\LionMine\Prototype2.1\Prototype2\Prototype2Content\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Rexru101\Documents\Visual Studio 2010\Projects\LionMine\Prototype2.1\Prototype2\Prototype2\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>

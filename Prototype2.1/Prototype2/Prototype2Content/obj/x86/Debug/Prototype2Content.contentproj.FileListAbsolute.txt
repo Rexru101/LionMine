@@ -4,3 +4,4 @@ C:\Users\Rexru101\Documents\Visual Studio 2010\Projects\Prototype2\Prototype2\Pr
 C:\Users\delio_000\Documents\Visual Studio 2010\Projects\Prototype2New\Prototype2\Prototype2\Prototype2\Prototype2Content\obj\x86\Debug\Prototype2Content.contentprojResolveAssemblyReference.cache
 C:\Users\Rexru101\Documents\Visual Studio 2010\Projects\Prototype2.1\Prototype2\Prototype2Content\obj\x86\Debug\Prototype2Content.contentprojResolveAssemblyReference.cache
 C:\Users\Rexru101\Documents\Visual Studio 2010\Projects\Lion-Mine\Prototype2.1\Prototype2\Prototype2Content\obj\x86\Debug\Prototype2Content.contentprojResolveAssemblyReference.cache
+C:\Users\Rexru101\Documents\Visual Studio 2010\Projects\LionMine\Prototype2.1\Prototype2\Prototype2Content\obj\x86\Debug\Prototype2Content.contentprojResolveAssemblyReference.cache
