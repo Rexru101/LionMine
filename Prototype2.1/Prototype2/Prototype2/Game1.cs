@@ -22,6 +22,7 @@ namespace Prototype2
         MouseState currentMouse, prevMouse;
         Color p1PathColor, p2PathColor, flagAreaColor1, flagAreaColor2, flagAreaColor3;
 
+
         Player p1, p2;
 
         const int HEIGHT = 790;

@@ -86,3 +86,20 @@ C:\Users\Rexru101\Documents\Visual Studio 2010\Projects\Lion-Mine\Prototype2.1\P
 C:\Users\Rexru101\Documents\Visual Studio 2010\Projects\Lion-Mine\Prototype2.1\Prototype2\Prototype2\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\Rexru101\Documents\Visual Studio 2010\Projects\Lion-Mine\Prototype2.1\Prototype2\Prototype2\obj\x86\Debug\Prototype2.exe
 C:\Users\Rexru101\Documents\Visual Studio 2010\Projects\Lion-Mine\Prototype2.1\Prototype2\Prototype2\obj\x86\Debug\Prototype2.pdb
+C:\Users\Ninjabit\Documents\LionMine\LionMine\Prototype2.1\Prototype2\Prototype2\bin\x86\Debug\Content\Sprites\hexBoard.xnb
+C:\Users\Ninjabit\Documents\LionMine\LionMine\Prototype2.1\Prototype2\Prototype2\bin\x86\Debug\Content\Sprites\hexSquare.xnb
+C:\Users\Ninjabit\Documents\LionMine\LionMine\Prototype2.1\Prototype2\Prototype2\bin\x86\Debug\Content\Sprites\hexSquareBlue.xnb
+C:\Users\Ninjabit\Documents\LionMine\LionMine\Prototype2.1\Prototype2\Prototype2\bin\x86\Debug\Content\Sprites\hexSquareRed.xnb
+C:\Users\Ninjabit\Documents\LionMine\LionMine\Prototype2.1\Prototype2\Prototype2\bin\x86\Debug\Content\Sprites\pixel.xnb
+C:\Users\Ninjabit\Documents\LionMine\LionMine\Prototype2.1\Prototype2\Prototype2\bin\x86\Debug\Content\Sprites\GoltanaFlag.xnb
+C:\Users\Ninjabit\Documents\LionMine\LionMine\Prototype2.1\Prototype2\Prototype2\bin\x86\Debug\Content\Sprites\LargFlag.xnb
+C:\Users\Ninjabit\Documents\LionMine\LionMine\Prototype2.1\Prototype2\Prototype2\bin\x86\Debug\Content\Sprites\redFlag.xnb
+C:\Users\Ninjabit\Documents\LionMine\LionMine\Prototype2.1\Prototype2\Prototype2\bin\x86\Debug\Content\Sprites\blueFlag.xnb
+C:\Users\Ninjabit\Documents\LionMine\LionMine\Prototype2.1\Prototype2\Prototype2\bin\x86\Debug\Content\Sprites\hexBoardCoordinates.xnb
+C:\Users\Ninjabit\Documents\LionMine\LionMine\Prototype2.1\Prototype2\Prototype2\bin\x86\Debug\Content\Fonts\SpriteFont1.xnb
+C:\Users\Ninjabit\Documents\LionMine\LionMine\Prototype2.1\Prototype2\Prototype2\bin\x86\Debug\Prototype2.exe
+C:\Users\Ninjabit\Documents\LionMine\LionMine\Prototype2.1\Prototype2\Prototype2\bin\x86\Debug\Prototype2.pdb
+C:\Users\Ninjabit\Documents\LionMine\LionMine\Prototype2.1\Prototype2\Prototype2\obj\x86\Debug\Prototype2.csprojResolveAssemblyReference.cache
+C:\Users\Ninjabit\Documents\LionMine\LionMine\Prototype2.1\Prototype2\Prototype2\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Ninjabit\Documents\LionMine\LionMine\Prototype2.1\Prototype2\Prototype2\obj\x86\Debug\Prototype2.exe
+C:\Users\Ninjabit\Documents\LionMine\LionMine\Prototype2.1\Prototype2\Prototype2\obj\x86\Debug\Prototype2.pdb
