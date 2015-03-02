@@ -7,6 +7,7 @@ using Microsoft.Xna.Framework;
 
 namespace Prototype2
 {//Bilal smells
+    //suck it goat rocks
     public class Player
     {
         Texture2D playerIcon, flag;
